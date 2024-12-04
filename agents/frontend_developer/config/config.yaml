@@ -1,0 +1,26 @@
+agent_config:
+  name: frontend_developer
+  version: '1.0.0'
+  features:
+    component_generation:
+      frameworks:
+        - react
+        - vue
+      styling:
+        - tailwind
+        - styled-components
+        - css-modules
+      types:
+        - typescript
+        - flow
+    testing:
+      frameworks:
+        - jest
+        - testing-library
+        - cypress
+      coverage_threshold: 80
+    component_library:
+      preferred: shadcn/ui
+      alternatives:
+        - material-ui
+        - chakra-ui
