@@ -1,0 +1,132 @@
+{
+    "tools": {
+        "mcp-scraper": {
+            "name": "MCP Web Scraper",
+            "description": "Advanced web scraping tool with support for dynamic content and rate limiting",
+            "examples": [
+                {
+                    "title": "Basic Website Scraping",
+                    "prompt": "Scrape the content from https://example.com and extract all article titles",
+                    "code": "await mcpTools.runScraper('https://example.com')"
+                },
+                {
+                    "title": "Dynamic Content Scraping",
+                    "prompt": "Scrape a JavaScript-heavy website and wait for dynamic content to load",
+                    "code": "await mcpTools.runScraper('https://example.com', { waitForDynamic: true })"
+                }
+            ]
+        },
+        "enhanced-chat": {
+            "name": "Enhanced Chat Interface",
+            "description": "Advanced chat interface with context management and specialized commands",
+            "examples": [
+                {
+                    "title": "Code Review",
+                    "prompt": "/review Please analyze this code for potential improvements:\n[code snippet]",
+                    "code": "await mcpTools.runEnhancedChat('/review [code]')"
+                },
+                {
+                    "title": "Documentation Generation",
+                    "prompt": "/docs Generate comprehensive documentation for this module",
+                    "code": "await mcpTools.runEnhancedChat('/docs [module name]')"
+                }
+            ]
+        }
+    },
+    "workflows": {
+        "code-analysis": {
+            "name": "Code Analysis Workflow",
+            "description": "Comprehensive code analysis including security, performance, and best practices",
+            "examples": [
+                {
+                    "title": "Full Code Review",
+                    "prompt": "Analyze this repository for security vulnerabilities and performance issues",
+                    "parameters": {
+                        "repo": "./my-project",
+                        "checks": ["security", "performance", "best-practices"]
+                    }
+                }
+            ]
+        },
+        "api-development": {
+            "name": "API Development Assistant",
+            "description": "Automated API development workflow including endpoint generation and documentation",
+            "examples": [
+                {
+                    "title": "Generate REST API",
+                    "prompt": "Create a REST API for a user management system with authentication",
+                    "parameters": {
+                        "type": "rest",
+                        "features": ["auth", "users", "roles"],
+                        "framework": "express"
+                    }
+                }
+            ]
+        }
+    },
+    "specialized_prompts": {
+        "code_generation": [
+            {
+                "title": "React Component Generator",
+                "prompt": "Create a React component for [description] with TypeScript and styled-components",
+                "context": "Generates modern React components following best practices"
+            },
+            {
+                "title": "API Endpoint Generator",
+                "prompt": "Generate an Express API endpoint for [functionality] with input validation and error handling",
+                "context": "Creates secure and well-documented API endpoints"
+            }
+        ],
+        "documentation": [
+            {
+                "title": "API Documentation",
+                "prompt": "Generate OpenAPI documentation for this endpoint including all parameters and responses",
+                "context": "Creates detailed API documentation following OpenAPI standards"
+            },
+            {
+                "title": "Code Documentation",
+                "prompt": "Create comprehensive JSDoc documentation for this module including examples",
+                "context": "Generates developer-friendly code documentation"
+            }
+        ],
+        "testing": [
+            {
+                "title": "Unit Test Generator",
+                "prompt": "Generate unit tests for [function/component] covering edge cases and error scenarios",
+                "context": "Creates comprehensive test suites with high coverage"
+            },
+            {
+                "title": "Integration Test Generator",
+                "prompt": "Create integration tests for the [feature] workflow including setup and teardown",
+                "context": "Generates end-to-end integration tests"
+            }
+        ]
+    },
+    "prompts": [
+        {
+            "title": "Generate Python Script",
+            "description": "Create a Python script using available MCP tools",
+            "prompt": "Generate a Python script that uses the following MCP tools: codebase_search, grep_search, and view_file to analyze code patterns in a project."
+        },
+        {
+            "title": "Setup Development Environment",
+            "description": "Configure development environment with necessary tools",
+            "prompt": "Help me set up a development environment with proper configuration using run_command and write_to_file tools."
+        },
+        {
+            "title": "Code Review Assistant",
+            "description": "Perform automated code review using MCP tools",
+            "prompt": "Review my code using codebase_search and related_files tools to identify potential improvements and best practices."
+        },
+        {
+            "title": "Workflow Automation",
+            "description": "Create automated workflow using multiple MCP tools",
+            "prompt": "Create a workflow that combines find_by_name, view_file, and edit_file tools to automate code refactoring tasks."
+        },
+        {
+            "title": "Project Analysis",
+            "description": "Analyze project structure and dependencies",
+            "prompt": "Analyze my project structure using list_dir and find_by_name tools to provide insights about code organization."
+        }
+    ]
+}

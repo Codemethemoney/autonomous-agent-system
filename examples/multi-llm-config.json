@@ -1,0 +1,48 @@
+{
+  "mcpServers": {
+    // Ollama LLM Server
+    "ollama": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-ollama"
+      ],
+      "env": {
+        "OLLAMA_HOST": "http://localhost:11434"
+      }
+    },
+    // OpenAI Server
+    "openai": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-openai"
+      ],
+      "env": {
+        "OPENAI_API_KEY": "your-api-key"
+      }
+    },
+    // Anthropic (Claude) Server
+    "anthropic": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-anthropic"
+      ],
+      "env": {
+        "ANTHROPIC_API_KEY": "your-api-key"
+      }
+    },
+    // Local LLM Server (example)
+    "local-llm": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "./servers/local-llm-server.js"
+      ],
+      "env": {
+        "MODEL_PATH": "/path/to/local/model"
+      }
+    }
+  }
+}

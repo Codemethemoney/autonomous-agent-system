@@ -1,0 +1,19 @@
+{
+    "id": "code-analysis-agent",
+    "type": "utility",
+    "command": "node",
+    "args": [
+        "/Users/garyoleary/MACK_MCP/mcp-chat-ui/src/agents/code-analysis-agent.js"
+    ],
+    "capabilities": [
+        "calculate_complexity",
+        "detect_duplicates",
+        "lint_code",
+        "generate_code_report"
+    ],
+    "security": {
+        "allowed_paths": [
+            "/Users/garyoleary/MACK_MCP"
+        ]
+    }
+}

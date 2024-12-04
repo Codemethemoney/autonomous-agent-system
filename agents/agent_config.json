@@ -1,0 +1,13 @@
+{
+    "agents": {
+        "vscode": {
+            "type": "vscode-extension",
+            "enabled": true,
+            "manifest_path": "agents/vscode_extension_agent.xml",
+            "settings": {
+                "workspace_integration": true,
+                "file_access": true
+            }
+        }
+    }
+}

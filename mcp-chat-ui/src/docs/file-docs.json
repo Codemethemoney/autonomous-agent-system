@@ -1,0 +1,43 @@
+{
+    "prompts/workflow-prompts.js": {
+        "description": "Contains system and user prompt templates for workflow generation",
+        "systemPrompt": "Expert workflow designer with automation and integration knowledge",
+        "purpose": "Defines how the AI understands and responds to workflow requests",
+        "keyComponents": [
+            "WORKFLOW_SYSTEM_PROMPT: Base personality and knowledge context",
+            "WORKFLOW_USER_TEMPLATE: Structure for processing user inputs"
+        ],
+        "example": "Used when generating new automation workflows from user descriptions"
+    },
+    "generator-service.js": {
+        "description": "Core service for generating tools and workflows using AI",
+        "systemPrompt": "AI-powered code and workflow generator with GitHub integration",
+        "purpose": "Converts user requests into executable workflows and tools",
+        "keyComponents": [
+            "generateWorkflow(): Creates new workflow specifications",
+            "generateTool(): Creates new tool implementations",
+            "_analyzeWorkflowPrompt(): Processes workflow requests with AI"
+        ],
+        "example": "Handles requests like 'Create a workflow to automate bill payments'"
+    },
+    "github-service.js": {
+        "description": "GitHub integration service for code search and repository management",
+        "purpose": "Finds relevant code examples and manages GitHub interactions",
+        "keyComponents": [
+            "searchGitHubRepositories(): Finds relevant code examples",
+            "fetchRepositoryContent(): Gets code from repositories"
+        ],
+        "example": "Used to find example implementations of similar tools"
+    },
+    "mcp-scraper.js": {
+        "description": "Advanced web scraping tool with dynamic content support",
+        "systemPrompt": "Specialized in extracting data from modern web applications",
+        "purpose": "Handles complex web scraping tasks with authentication and dynamic content",
+        "keyComponents": [
+            "Browser automation capabilities",
+            "Dynamic content handling",
+            "Rate limiting and error recovery"
+        ],
+        "example": "Scraping data from JavaScript-heavy websites with login requirements"
+    }
+}

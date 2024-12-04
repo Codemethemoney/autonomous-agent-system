@@ -1,0 +1,58 @@
+{
+  "dependencies": {
+    "@airbnb/node-memwatch": "^3.0.0",
+    "@modelcontextprotocol/sdk": "^1.0.1",
+    "@supabase/supabase-js": "^2.46.2",
+    "axios": "^1.6.7",
+    "better-sqlite3": "^11.6.0",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.1",
+    "express-rate-limit": "^7.4.1",
+    "next": "^15.0.3",
+    "puppeteer": "^23.9.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "selenium-webdriver": "^4.27.0",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.16.0",
+    "@types/node": "^22.10.1",
+    "@types/react": "^18.3.12",
+    "cyclomatic-complexity": "^1.2.5",
+    "eslint": "^9.16.0",
+    "globals": "^14.0.0",
+    "jsinspect": "^0.12.7",
+    "prettier": "^3.4.1",
+    "typescript": "^5.7.2"
+  },
+  "name": "mack_mcp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "dev": "next dev -p 3006",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --quiet",
+    "lint:eslint": "eslint .",
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix --quiet",
+    "lint:report": "eslint . --ext .js,.jsx,.ts,.tsx -f json -o eslint-report.json",
+    "config:init": "cp .env.template .env && echo 'Configuration initialized. Please edit .env with your specific settings.'",
+    "config:rotate": "node scripts/rotate-credentials.js",
+    "logs:stats": "node scripts/log-analyzer.js stats",
+    "logs:export": "node scripts/log-analyzer.js export",
+    "plugins:load": "node -e \"require('./src/utils/plugin-manager').loadPlugins()\"",
+    "plugins:list": "node -e \"console.log(require('./src/utils/plugin-manager').listPlugins())\"",
+    "plugins:demo": "node scripts/plugin-demo.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

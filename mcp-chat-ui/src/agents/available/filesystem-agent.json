@@ -1,0 +1,22 @@
+{
+    "id": "filesystem-agent",
+    "type": "utility",
+    "command": "node",
+    "args": [
+        "/Users/garyoleary/MACK_MCP/mcp-chat-ui/src/agents/filesystem-agent.js"
+    ],
+    "capabilities": [
+        "list_directory",
+        "read_file",
+        "write_file",
+        "delete_file",
+        "create_directory"
+    ],
+    "security": {
+        "allowed_paths": [
+            "/Users/garyoleary/Desktop",
+            "/Users/garyoleary/Documents",
+            "/Users/garyoleary/MACK_MCP"
+        ]
+    }
+}

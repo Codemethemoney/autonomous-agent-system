@@ -1,0 +1,24 @@
+{
+    "id": "mcp-tool-integration-agent",
+    "type": "utility",
+    "command": "node",
+    "args": [
+        "/Users/garyoleary/MACK_MCP/mcp-chat-ui/src/agents/mcp-tool-integration-agent.js"
+    ],
+    "capabilities": [
+        "execute_filesystem_tools",
+        "execute_github_tools",
+        "execute_sqlite_tools",
+        "execute_brave_search_tools",
+        "execute_postgres_tools",
+        "execute_fetch_tools",
+        "execute_gdrive_tools"
+    ],
+    "security": {
+        "allowed_paths": [
+            "/Users/garyoleary/MACK_MCP",
+            "/Users/garyoleary/Desktop",
+            "/Users/garyoleary/Documents"
+        ]
+    }
+}
