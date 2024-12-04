@@ -1,0 +1,20 @@
+groups:
+- name: agent_alerts
+  rules:
+  - alert: AgentDown
+    expr: up{job="agent-metrics"} == 0
+    for: 1m
+    labels:
+      severity: critical
+    annotations:
+      summary: "Agent down (instance {{ $labels.instance }})"
+      description: "Agent has been down for more than 1 minute"
+
+  - alert: HighErrorRate
+    expr: rate(agent_error_total[5m]) > 0.1
+    for: 2m
+    labels:
+      severity: warning
+    annotations:
+      summary: "High error rate (instance {{ $labels.instance }})"
+      description: "Agent error rate is above 10% for the last 5 minutes"
