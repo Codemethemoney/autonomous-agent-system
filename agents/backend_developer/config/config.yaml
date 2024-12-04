@@ -1,0 +1,29 @@
+agent_config:
+  name: backend_developer
+  version: '1.0.0'
+  features:
+    api_development:
+      frameworks:
+        - fastapi
+        - django
+        - flask
+      security:
+        - jwt
+        - oauth2
+        - api_keys
+      documentation:
+        - openapi
+        - swagger
+    database:
+      engines:
+        - postgresql
+        - mysql
+        - sqlite
+      orms:
+        - sqlalchemy
+        - django_orm
+    testing:
+      frameworks:
+        - pytest
+        - unittest
+      coverage_threshold: 90
