@@ -1,0 +1,44 @@
+{
+    "agents": {
+        "code_analyzer": {
+            "type": "analysis",
+            "enabled": true,
+            "model": "gpt-4",
+            "capabilities": ["code_review", "bug_detection", "optimization_suggestions"],
+            "priority": 1
+        },
+        "code_generator": {
+            "type": "generation",
+            "enabled": true,
+            "model": "gpt-4",
+            "capabilities": ["code_generation", "refactoring", "documentation"],
+            "priority": 2
+        },
+        "test_writer": {
+            "type": "testing",
+            "enabled": true,
+            "model": "gpt-4",
+            "capabilities": ["test_generation", "test_coverage_analysis"],
+            "priority": 3
+        },
+        "deployment_manager": {
+            "type": "deployment",
+            "enabled": true,
+            "model": "gpt-4",
+            "capabilities": ["deployment_automation", "environment_setup"],
+            "priority": 4
+        },
+        "security_auditor": {
+            "type": "security",
+            "enabled": true,
+            "model": "gpt-4",
+            "capabilities": ["security_analysis", "vulnerability_detection"],
+            "priority": 5
+        }
+    },
+    "workflows": {
+        "code_development": ["code_analyzer", "code_generator", "test_writer"],
+        "deployment": ["security_auditor", "deployment_manager"],
+        "full_cycle": ["code_analyzer", "code_generator", "test_writer", "security_auditor", "deployment_manager"]
+    }
+}

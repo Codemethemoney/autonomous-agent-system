@@ -1,0 +1,40 @@
+{
+    "models": {
+        "gpt-4": {
+            "priority": 1,
+            "enabled": true,
+            "rate_limits": {
+                "requests_per_minute": 50,
+                "requests_per_hour": 500
+            },
+            "capabilities": ["code_generation", "code_review", "debugging", "testing"]
+        },
+        "gpt-3.5-turbo": {
+            "priority": 2,
+            "enabled": true,
+            "rate_limits": {
+                "requests_per_minute": 100,
+                "requests_per_hour": 1000
+            },
+            "capabilities": ["code_generation", "code_review", "debugging", "testing"]
+        },
+        "codellama": {
+            "priority": 3,
+            "enabled": true,
+            "rate_limits": {
+                "requests_per_minute": 200,
+                "requests_per_hour": 2000
+            },
+            "capabilities": ["code_generation", "code_review"]
+        },
+        "claude-2": {
+            "priority": 4,
+            "enabled": true,
+            "rate_limits": {
+                "requests_per_minute": 100,
+                "requests_per_hour": 1000
+            },
+            "capabilities": ["code_generation", "code_review", "debugging", "testing"]
+        }
+    }
+}
